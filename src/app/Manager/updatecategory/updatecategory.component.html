@@ -1,0 +1,19 @@
+<div class="container">
+  <br><h1 style="margin-left:500px">Update Category</h1>
+  <button  (click)="BackButton()" mat-raised-button color="primary" style="margin-left:1100px">&nbsp;&nbsp; BACK</button><br>
+  <form class="example-form" style="margin-left:200px">
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Category Id" [(ngModel)]="category_id" name="product_id" disabled>
+    </mat-form-field>
+
+    <form class="example-form" >
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Category Name" [(ngModel)]="category_name" name="product_name">
+    </mat-form-field>
+<br>
+      <button  (click)="UpdateCategory()" mat-raised-button color="primary" style="margin-left:100px">&nbsp;&nbsp; Save</button>
+      <button  (click)="CancelCategory()" mat-raised-button color="primary" style="margin-left:100px">&nbsp;&nbsp; Cancel</button>
+
+
+
+

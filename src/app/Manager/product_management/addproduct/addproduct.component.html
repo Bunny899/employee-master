@@ -1,0 +1,84 @@
+<div class="container">
+  <h1 style="margin-left:500px">ADD PRODUCT</h1>
+  <button  (click)="BackButton()" mat-raised-button color="primary" style="margin-left:1100px">&nbsp;&nbsp; BACK</button>
+  <form class="example-form" #employeeform="ngForm">
+
+    <form class="example-form" style="margin-left:200px">
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Product name" [(ngModel)]="product_name" name="product_name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <!-- <h5>Choose Category Name</h5> -->
+      <mat-select [(value)]="category_id" placeholder="Choose Category Name">
+        <mat-option *ngFor="let item of categoryarr" value={{item.category_id}}>{{item.category_name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- <form class="example-form" >
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Category id" [(ngModel)]="category_id" name="category_id">
+    </mat-form-field> -->
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Price" [(ngModel)]="product_price" name="product_price">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product color" [(ngModel)]="product_colour" name="product_colour">
+      </mat-form-field>
+
+      <h5><b>Product Image</b></h5>
+          <input type="file" (change)="onselect($event)" selectedFile="product_image">
+
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Weight" [(ngModel)]="product_weight" name="product_weight">
+      </mat-form-field>
+
+      <form class="example-form" >
+        <mat-form-field class="example-full-width" >
+          <input matInput placeholder="Product Warranty" [(ngModel)]="product_warranty" name="product_warranty">
+        </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Material" [(ngModel)]="product_material" name="product_material">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Roomtype" [(ngModel)]="product_Roomtype" name="product_Roomtype">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Height" [(ngModel)]="product_height" name="product_height">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Width" [(ngModel)]="product_width" name="product_width">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Depth" [(ngModel)]="product_depth" name="product_depth">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Quantity" [(ngModel)]="product_qty" name="product_qty">
+      </mat-form-field>
+
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <input matInput placeholder="Product Stock On Hand" [(ngModel)]="product_soh" name="product_soh">
+      </mat-form-field>
+
+<br>
+      <button  (click)="onAddProductButton()" mat-raised-button color="primary">&nbsp;&nbsp;&nbsp; ADD</button>
+      &nbsp;&nbsp;&nbsp;<button   mat-raised-button color="primary">&nbsp;&nbsp;&nbsp; CANCEL</button>

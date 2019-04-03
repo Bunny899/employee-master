@@ -1,0 +1,52 @@
+<h1  style="margin-left:600px">Done Salary</h1>
+<button  (click)="BackButton()" mat-raised-button color="primary" style="margin-left:1200px">&nbsp;&nbsp; BACK</button><br><br>
+<div class="container" style="margin-left:300px;padding-right: 8%">
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="employee_name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.employee_name}} </td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="employee_joining_date">
+        <th mat-header-cell *matHeaderCellDef> Joining Date </th>
+       <td mat-cell *matCellDef="let element"> {{element.employee_joining_date | date :'dd-MM-yyyy'}} </td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="employee_salary">
+        <th mat-header-cell *matHeaderCellDef> Salary </th>
+        <td mat-cell *matCellDef="let element"> {{element.employee_salary}} </td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="employee_designation">
+        <th mat-header-cell *matHeaderCellDef>Designation </th>
+        <td mat-cell *matCellDef="let element">{{element.employee_designation}}</td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="employee_mobileno">
+        <th mat-header-cell *matHeaderCellDef>Contact </th>
+        <td mat-cell *matCellDef="let element">{{element.employee_mobileno}}</td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="employee_city">
+        <th mat-header-cell *matHeaderCellDef>City </th>
+        <td mat-cell *matCellDef="let element">{{element.employee_city}}</td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="employee_gender">
+        <th mat-header-cell *matHeaderCellDef>Gender </th>
+        <td mat-cell *matCellDef="let element">{{element.employee_gender}}</td>
+      </ng-container>
+      <br>
+      <ng-container matColumnDef="salary_status">
+        <th mat-header-cell *matHeaderCellDef>Status </th>
+        <td mat-cell *matCellDef="let element">{{element.salary_status}}</td>
+      </ng-container>
+      <br>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

@@ -1,0 +1,29 @@
+<br><br>
+<h1 style="margin-left:600px">Personal Loan</h1>
+
+<br>
+<br>
+<form class="example-form" style="margin-left:400px" #employeeform="ngForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Enter Amount to be withdraw" type="number" [(ngModel)]="loan_amount" name="loan_amount">
+  </mat-form-field>
+<mat-form-field>
+    <mat-label>Enter reason for withdrawal</mat-label>
+    <textarea [(ngModel)]="loan_reason" name="loan_reason" matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="2"
+              cdkAutosizeMaxRows="5"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-radio-group [(ngModel)]="loan_months" name="loan_months" type="number">
+    <mat-radio-button [value]="6">6 Months</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-radio-button [value]="8">8 Months</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-radio-button [value]="12">12 Months</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </mat-radio-group>
+  <br>
+  <br>
+  <mat-checkbox style="margin-left:350px">I Agree?</mat-checkbox>
+  <br>
+  <br>
+  <button (click)="onAddLoanButton()" style="margin-left:300px;width: 200px" mat-raised-button color="primary">Apply for Loan</button>

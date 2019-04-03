@@ -1,0 +1,61 @@
+<div class="container">
+  <h1 style="margin-left:500px">My Profile</h1>
+  <!-- <button  (click)="BackButton()" mat-raised-button color="primary" style="margin-left:1100px">&nbsp;&nbsp; BACK</button> -->
+  <form class="example-form" style="margin-left:200px">
+    <mat-form-field class="example-full-width" >
+        <b>{{"Your Email"}}</b>
+      <input matInput  [(ngModel)]="employee_email" name="employee_email" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Your Password"}}</b>
+      <input matInput  [(ngModel)]="employee_password" name="employee_password" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Name"}}</b>
+      <input matInput  [(ngModel)]="employee_name" name="employee_name" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Joining-Date"}}</b>
+      <input matInput  name="employee_joining_date" disabled>{{employee_joining_date | date:'dd-MM-yyyy'}}
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Salary"}}</b>
+      <input matInput  [(ngModel)]="employee_salary" name="employee_salary" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Designation"}}</b>
+      <input matInput [(ngModel)]="employee_designation" name="employee_designation" disabled >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Contact Number"}}</b>
+      <input matInput  [(ngModel)]="employee_mobileno" name="employee_mobileno" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"City"}}</b>
+      <input matInput [(ngModel)]="employee_city" name="employee_city" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Gender"}}</b>
+      <input matInput [(ngModel)]="employee_gender" name="employee_gender" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Address"}}</b>
+      <input matInput [(ngModel)]="employee_address" name="employee_address" disabled>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+        <b>{{"Salary Status"}}</b>
+      <input matInput [(ngModel)]="salary_status" name="salary_status" disabled>
+    </mat-form-field>
+    <br>
+      <button   mat-raised-button color="primary" style="margin-left:100px" (click)="OnUpdate()">&nbsp;&nbsp; Update</button>
+      <button   mat-raised-button color="primary" style="margin-left:100px" routerLink="/CashierHomepage">&nbsp;&nbsp; Cancel</button>

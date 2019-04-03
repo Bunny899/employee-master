@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 style="margin-left:500px">Add Category</h1>
+  <button  (click)="BackButton()" mat-raised-button color="primary" style="margin-left:1100px">&nbsp;&nbsp; BACK</button>
+  <form class="example-form" style="margin-left:200px">
+
+    <form class="example-form">
+    <mat-form-field class="example-full-width" >
+      <input matInput placeholder="Category name" [(ngModel)]="category_name" name="category_name">
+    </mat-form-field>
+
+<br>
+      <button  (click)="onAddCategoryButton()" mat-raised-button color="primary">&nbsp;&nbsp;&nbsp; ADD</button>
+      &nbsp;&nbsp;&nbsp;<button   mat-raised-button color="primary" routerLink='viewcategory'>&nbsp;&nbsp;&nbsp; CANCEL</button>
